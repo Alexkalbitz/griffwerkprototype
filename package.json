@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Alexkalbitz/griffwerkprototype/issues"
   },
-  "homepage": "https://github.com/Alexkalbitz/griffwerkprototype#readme"
+  "homepage": "https://github.com/Alexkalbitz/griffwerkprototype#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
