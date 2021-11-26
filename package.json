@@ -1,0 +1,19 @@
+{
+  "name": "griffwerkprototype",
+  "version": "1.0.0",
+  "description": "uhuoh",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexkalbitz/griffwerkprototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexkalbitz/griffwerkprototype/issues"
+  },
+  "homepage": "https://github.com/Alexkalbitz/griffwerkprototype#readme"
+}
