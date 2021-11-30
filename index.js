@@ -17,9 +17,15 @@ app.get('/', (req, res) => {
 })
 
 app.get("/test/:id", (req, res) => {
-    console.log(req.params.id)
+
+    if (req.params.id === "1234") {
+        app.send
+    } else {
+        app.send("fail")
+    }
 
 })
+app.get
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
