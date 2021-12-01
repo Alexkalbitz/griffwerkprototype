@@ -5,17 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    {% includes "index.html" %}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Griffwerk Retoure</title>
 </head>
 
+
 <body>
-    <h1>Home</h1>
 
-
-    {% block content %}
-    {{title}}
-    {% endblock %}
+    <div class="d-flex justify-content-center">
+        <form action="" method="post">
+            {{msg}}
+            {% if content.id %}
+            <div class="mb-3">Paket gefunden: {{content.id}}</div>
+            <br>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Bitte bestätigen mit der Empfänger Postleitzahl
+                </label>
+                <input type="hidden" id="custId" name="nr" value={{content.id}}>
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="z.b. 70710">
+            </div>
+            {% else %}
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Paketnummer
+                </label>
+                <input type="text" class="form-control" id="nr" name="nr">
+            </div>
+            {% endif %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
 </body>
 

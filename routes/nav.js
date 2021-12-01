@@ -2,28 +2,68 @@ const conf = require('../config.json')
 var express = require('express')
 const router = express.Router();
 
-const ticket = {
-    "1": {
-        "id": "IEAE5A62KQX4UT4X",
-        "accountId": "IEAE5A62",
-        "title": "How-To Guide: Personal Space",
-        "status": "Active",
-        "importance": "Normal",
-        "createdDate": "2021-11-29T19:09:03Z",
-        "updatedDate": "2021-11-29T19:09:04Z",
-        "dates": {
-            "type": "Backlog"
+const nav = [{
+    "id": "1234",
+    "package_nr": "1234",
+    "status": "Active",
+    "importance": "Normal",
+    "sent": "10-11-2021",
+    "receiver": "BAHAG",
+    "ZIP": "80333",
+    "items": [
+        {
+            "id": "8255",
+            "desc": "handle gray",
+            "amount": 5,
+            "price": 9.99
         },
-        "scope": "WsTask",
-        "customStatusId": "IEAE5A62JMAAAAAA",
-        "permalink": "https://app-us2.wrike.com/open.htm?id=801787799",
-        "priority": "00ca98008000000000000800"
-    },
-}
+        {
+            "id": "8555",
+            "desc": "handle blue",
+            "amount": 1,
+            "price": 9.99,
+        },
+        {
+            "id": "4222",
+            "desc": "clipper gray",
+            "amount": 2,
+            "price": 4.99,
+        },
+    ],
+},
+{
+    "id": "1111",
+    "package_nr": "1111",
+    "status": "Active",
+    "importance": "Normal",
+    "sent": "10-11-2021",
+    "receiver": "BAHAG",
+    "ZIP": "80333",
+    "items": [
+        {
+            "id": "5222",
+            "desc": "doorknob gray",
+            "amount": 5,
+            "price": 7.99
+        },
+        {
+            "id": "1558",
+            "desc": "handle dark",
+            "amount": 1,
+            "price": 9.99,
+        },
+    ]
+}]
+
 
 router.get('/:id', function (req, res, next) {
-
-    res.json(ticket[req.params.id])
+    for (record of nav) {
+        if (record.id === req.params.id) {
+            res.json(record)
+            return
+        }
+    }
+    res.json({})
 });
 
 module.exports = router;

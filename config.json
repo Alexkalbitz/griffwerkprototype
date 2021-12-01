@@ -1,3 +1,4 @@
 {
-    "viewdir": "c:\\Projects\\nodeprojects\\griffwerkprototype\\views\\"
+    "viewdir": "c:\\Projects\\nodeprojects\\griffwerkprototype\\views\\",
+    "baseurl": "http://localhost:3000"
 }
